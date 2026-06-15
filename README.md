@@ -1,4 +1,4 @@
-# NonPAramatric uncertainty Quantification#
+# NonParamatric uncertainty Quantification #
 The current repository provides source codes and results for Data Assimilation (DA) and Uncertainty Quantification (UQ) to recover results presented in 
-    <a href="https://hal.science/hal-05584830v1/document" target="_blank">
+    <a href="https://polytechnique.hal.science/hal-05584830/" target="_blank">
     </a>
