@@ -3,6 +3,5 @@ The current repository provides source codes and results for Data Assimilation (
 <sub><sup>
     David A. Ham. (2023). 
     <a href="https://hal.science/hal-05584830v1/document" target="_blank">
-    *Firedrake*, First edition.
     </a>
   </sup></sub>.
