@@ -1,4 +1,4 @@
-# NonParamatric uncertainty Quantification #
+# NonParametric uncertainty Quantification #
 The current repository provides source codes and results for Data Assimilation (DA) and Uncertainty Quantification (UQ) of RANS models. In particular, we focus on NonParametric uncertainty Quantification (NPuQ) approaches applied to the RANS-SA model. 
 
 The codes reproduce results presented in 
