@@ -1,0 +1,49 @@
+#open terminal
+0)
+sudo apt update
+sudo apt upgrade -y
+
+#close and re-open terminal
+1)
+curl -O https://raw.githubusercontent.com/firedrakeproject/firedrake/release/scripts/firedrake-configure
+2)
+sudo apt install $(python3 firedrake-configure --show-system-packages)
+3)
+git clone --branch $(python3 firedrake-configure --show-petsc-version) https://gitlab.com/petsc/petsc.git
+cd petsc
+4)
+python3 ../firedrake-configure --show-petsc-configure-options | xargs -L1 ./configure --download-slepc
+5)
+make PETSC_DIR=/home/administrateur/petsc PETSC_ARCH=arch-firedrake-default all
+6)
+make check
+cd ..
+7)
+export SLEPC_DIR=$PETSC_DIR/$PETSC_ARCH
+8)
+python3 -m venv venv-firedrake
+. venv-firedrake/bin/activate
+9)
+pip cache purge
+10)
+pip cache remove mpi4py
+pip cache remove petsc4py
+pip cache remove h5py
+pip cache remove slepc4py
+pip cache remove libsupermesh
+pip cache remove firedrake
+11)
+export $(python3 firedrake-configure --show-env)
+export SLEPC_DIR=$PETSC_DIR/$PETSC_ARCH
+12)
+pip install --no-binary h5py 'firedrake[check,slepc]'
+
+#check install 
+13)
+firedrake-check
+
+#install other package
+14)
+pip install meshio
+pip install matplotlib
+pip install vtk
