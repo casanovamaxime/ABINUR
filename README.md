@@ -1,5 +1,6 @@
 # ABINUR : Adjoint-based Bayesian Inference of Non-parametric corrections with Ucertainty quantification  for RANS modeling #
-The current repository provides source codes and results for Data Assimilation (DA) and Uncertainty Quantification (UQ) of RANS models. In particular, we focus on NonParametric uncertainty Quantification (NPuQ) approaches applied to the RANS-SA model. 
+
+The current repository provides source codes and results for adjoint-based Bayesian Inference of Non-parametric corrections with Ucertainty quantification, applied to the RANS-SA closure model.
 
 The codes reproduce results presented in 
     Maxime C. et al, 
