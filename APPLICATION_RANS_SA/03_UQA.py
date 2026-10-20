@@ -98,7 +98,7 @@ number_of_dir_to_check = 5
 #Solve forward
 qx = solve_SA_BorA(uvhfx,nuthfx,Qf,Re_s,qx,ux,px,nutx,phiux,phipx,phinutx,fx,Q,h,d2x,dX,set_annotation,STATE,DA_TRUE)
 #Solve adjoint
-fAx,Jhat = perform_DA(P1,ux,uvhfx_noise,fx,dX,tau_f,kappa2_f,f_opti_method,f_display,f_iter,f_tol,delta_y,sigma_y,DA_TRUE) 
+fAx,Jhat = perform_DA(Qf,P1,ux,uvhfx_noise,fx,dX,tau_f,kappa2_f,f_opti_method,f_display,f_iter,f_tol,delta_y,sigma_y,DA_TRUE) 
 #Solve uq
 perform_UQ_A(xes,yes,delta_y,sigma_y,uvhfx,nuthfx,uvhfx_noise,Mf,Qf,Kf,Jhat,Re_s,qx,ux,px,nutx,phiux,phipx,phinutx,fAx,P1,P1B,Q,h,d2x,dX,rA,number_of_dir_to_check,check_grad_hess,set_annotation,STATE,DA_TRUE)
 
