@@ -95,7 +95,7 @@ number_of_dir_to_check = 0
 qx = solve_SA_BorA(uvhfx,nuthfx,Qf,Re_s,qx,ux,px,nutx,phiux,phipx,phinutx,fx,Q,h,d2x,dX,set_annotation,STATE,DA_TRUE)
 #DA
 #Solve adjoint
-fAx,Jhat = perform_DA(P1,ux,uvhfx_noise,fx,dX,tau_f,kappa2_f,f_opti_method,f_display,f_iter,f_tol,delta_y,sigma_y,DA_TRUE)
+fAx,Jhat = perform_DA(Qf,P1,ux,uvhfx_noise,fx,dX,tau_f,kappa2_f,f_opti_method,f_display,f_iter,f_tol,delta_y,sigma_y,DA_TRUE)
 write_j_(j_s)
 write_fx_(fAx)
 #SA A 
