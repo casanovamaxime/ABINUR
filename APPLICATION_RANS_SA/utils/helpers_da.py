@@ -12,7 +12,7 @@ def perform_DA(Qf,P1,ux,uvhfx_noise,fx,dX,tau,kappa2,f_opti_method,f_display,f_i
     #Compute fxbar
     phifx = TestFunction(P1)
     fxbar = Function(P1)
-    solve(inner(fxbar, phifx)*dX - (tau)*(kappa2*inner(fx/Qf, phifx)*dX + inner(grad(fx/Qf), grad(phifx))*dX)==0, fxbar,bcs=[DirichletBC(P1, Constant(0.), [13,14])])
+    solve(inner(fxbar, phifx)*dX - (tau)*(kappa2*inner(fx, phifx)*dX + inner(grad(fx), grad(phifx))*dX)==0, fxbar,bcs=[DirichletBC(P1, Constant(0.), [13,14])])
     #Where assimilating
     #Full cost functional
     if DA_TRUE==True:
