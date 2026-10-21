@@ -51,7 +51,7 @@ uvhfx,nuthfx = read_field_HF(P1,P1B)
 #Add normally distributed noise
 pcg = PCG64(seed=1)
 rg = RandomGenerator(pcg)
-sigma_y = 0.01
+sigma_y = 0.0001
 etax = rg.normal(P1B, 0., sigma_y)
 uvhfx_noise = define_noisy_HF(etax,P1,P1B)#dnsux
 
