@@ -14,7 +14,7 @@ def define_Qf(P1):
 def define_Kf(P1,kappa2_f,tau_f):
     k = (tau_f)*( kappa2_f*inner(TrialFunction(P1), TestFunction(P1))*dx + inner(grad(TrialFunction(P1)), grad(TestFunction(P1)))*dx )
     #Apply Dirichlet bc on farfield (no variance expected)
-    Kf = assemble(k,bcs=[DirichletBC(P1, Constant(0.), [13,14])])
+    Kf = assemble(k)
     return Kf
 
 #Define full mass matrix
